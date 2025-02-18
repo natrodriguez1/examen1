@@ -2,18 +2,19 @@
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+        <th scope="col">center</th>
+        <th scope="col">created</th>
+        <th scope="col">description</th>
+        <th scope="col"></th>
       </tr>
     </thead>
     <tbody>
-        @for(element of elements; track element.href){
+        @for(element of elements; track $index){
             <tr>
                 <th scope="row">{{$index}}</th>
-                <td>{{element.href}}</td>
-                <td></td>
-                <td></td>
+                <td>{{element.data[0].center}}</td>
+                <td>{{element.data[0].date_created}}</td>
+                <td>{{element.data[0].description}}</td>
               </tr>
         }
     </tbody>

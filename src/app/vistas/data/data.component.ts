@@ -25,7 +25,7 @@ export class DataComponent {
       const data = respuesta as any;
       // console.log('const data: ', data);
       this.elements = data.collection.items || [];
-      console.log('items: ', this.elements[0] || []);
+      console.log('items: ', this.elements[0].data[0].center || []);
       this.cdr.detectChanges();
 
     });
